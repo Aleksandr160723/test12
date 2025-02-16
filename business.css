@@ -1,0 +1,198 @@
+.business-card {
+    background: linear-gradient(135deg, #2ee016, rgb(14, 180, 83));
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.business-card:hover {
+    transform: scale(1.02);
+}
+
+.business-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-cost {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.business-income {
+    font-size: 16px;
+}
+
+.business-count {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.business-buy-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.business-buy-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.business-buy-btn:disabled {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+.business-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Добавьте эти медиа-запросы для лучшей адаптивности */
+@media (max-width: 768px) {
+    .business-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    .business-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-card {
+        padding: 12px;
+    }
+    
+    .business-info {
+        gap: 15px;
+    }
+    
+    .business-cost {
+        font-size: 16px;
+    }
+    
+    .business-income {
+        font-size: 14px;
+    }
+}
+
+.business-card {
+    background: none;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.business-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Для каждого бизнеса добавьте специфичный стиль */
+.business-card.gasStation::before {
+    background-image: var(--gasStation-bg);
+}
+
+.business-card.restaurant::before {
+    background-image: var(--restaurant-bg);
+}
+
+.business-card.company::before {
+    background-image: var(--beauty-bg);
+}
+
+.business-card.hotel::before {
+    background-image: var(--hotel-bg);
+  }
+  
+  .business-card.casino::before {
+    background-image: var(--casino-bg);
+  }
+  
+  .business-card.stadium::before {
+    background-image: var(--stadium-bg);
+  }
+  
+  .business-card.mall::before {
+    background-image: var(--mall-bg);
+  }
+  
+  .business-card.airport::before {
+    background-image: var(--airport-bg);
+  }
+  
+  .business-card.port::before {
+    background-image: var(--port-bg);
+  }
+  
+  .business-card.skyscraper::before {
+    background-image: var(--skyscraper-bg);
+  }
+  
+  .business-card.spaceport::before {
+    background-image: var(--spaceport-bg);
+  }
+  
+  .business-card.quantum::before {
+    background-image: var(--quantum-bg);
+  }
+  
+  .business-card.research::before {
+    background-image: var(--research-bg);
+  }
+  
+  .business-card.empire::before {
+    background-image: var(--empire-bg);
+  }
+
+/* Добавьте переменные для изображений */
+:root {
+    --gasStation-bg: url('images/photo_2025-02-16_16-45-36.jpg');
+    --restaurant-bg: url('images/photo_2025-02-16_16-42-02.jpg');
+    --beauty-bg: url('images/photo_2025-02-16_16-36-48.jpg');
+    --hotel-bg: url('images/photo_2025-02-16_16-46-28.jpg');
+    --casino-bg: url('images/photo_2025-02-16_16-54-08.jpg');
+    --stadium-bg: url('images/photo_2025-02-16_16-56-29.jpg');
+    --mall-bg: url('images/photo_2025-02-16_16-56-34.jpg');
+    --airport-bg: url('images/photo_2025-02-16_17-03-31.jpg');
+    --port-bg: url('images/photo_2025-02-16_17-03-35.jpg');
+    --skyscraper-bg: url('images/photo_2025-02-16_17-03-38.jpg');
+    --spaceport-bg: url('images/photo_2025-02-16_17-18-22.jpg');
+    --quantum-bg: url('images/photo_2025-02-16_17-19-31.jpg');
+    --research-bg: url('images/photo_2025-02-16_17-20-14.jpg');
+    --empire-bg: url('images/photo_2025-02-16_17-20-43.jpg');
+}
